@@ -2,6 +2,7 @@
 docker 快速部署 nginx 环境,适用于 HTML 页面站点,简单 Web 测试环境以及反向代理 docker 容器等需求.
 
 ## 部署
+### docker
 在 root 目录下 git clone 本仓库用来挂载相关配置文件
 ```shell
 cd ~
@@ -16,6 +17,14 @@ docker run -d --name=nginx --restart=always \
     -v ~/nginx/ssl:/etc/nginx/ssl \
     -v ~/nginx/html:/usr/share/nginx/html \
     nginx
+```
+
+### docker compose
+```shell
+cd ~
+git clone https://github.com/stilleshan/nginx.git
+cd nginx
+docker-compose up -d
 ```
 
 ## 说明
@@ -33,3 +42,4 @@ docker run -d --name=nginx --restart=always \
 
 ## 链接
 [Docker 打造支持快速部署和迁移的 Nginx 环境](https://www.ioiox.com/archives/91.html)
+
